@@ -11,8 +11,13 @@ const REST_HOST = "https://api.rebuschain.com:1317"
 
 
 const cosmos = new Cosmos(REST_HOST, chainId);
+
+// set rebus prefix address
 cosmos.setBech32MainPrefix("rebus");
-cosmos.setPath("m/44'/118'/0'/0/0");
+
+// set the standard rebus derivation key (not evm address)
+cosmos.setPath("m/44'/118'/0'/0/0"); 
+
 const address = cosmos.getAddress(mnemonic);
 const privKey = cosmos.getECPairPriv(mnemonic);
 const pubKeyAny = cosmos.getPubKeyAny(privKey);
