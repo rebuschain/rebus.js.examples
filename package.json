@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cosmostation/cosmosjs": "^0.10"
+    "@cosmostation/cosmosjs": "^0.10",
+    "bech32": "^1.1.3"
   }
 }
